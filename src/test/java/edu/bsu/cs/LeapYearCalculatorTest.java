@@ -12,7 +12,7 @@ public class LeapYearCalculatorTest {
 
     @Test
     public void is2025ArrayLeapYear() {
-        assertIsLeapYear(2025);
+        assertIsNotLeapYear(2025);
     }
 
     @Test
@@ -23,5 +23,10 @@ public class LeapYearCalculatorTest {
     public void assertIsLeapYear(int inYear) {
         boolean isLeapYear = FindLeapYear.isLeapYear(inYear);
         Assertions.assertTrue(isLeapYear);
+    }
+
+    public void assertIsNotLeapYear(int inYear) {
+        boolean isLeapYear = FindLeapYear.isLeapYear(inYear);
+        Assertions.assertFalse(isLeapYear);
     }
 }
